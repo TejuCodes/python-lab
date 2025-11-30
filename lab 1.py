@@ -1,64 +1,53 @@
-# =========================================
-#   Combined Program: List, Tuple, Dictionary
-# =========================================
+# List example
+numbers = [10, 20, 30, 40]
 
-print("\n===== LIST OPERATIONS =====")
+# Methods
+numbers.append(50)         # Add at end
+numbers.insert(1, 15)      # Insert at position
+numbers.remove(30)         # Remove value
+numbers.pop()              # Remove last item
+numbers.sort()             # Sort list
+numbers.reverse()          # Reverse list
 
-# List
-numbers = [10, 20, 30, 40, 50]
-print("Original List:", numbers)
+# Built-in functions
+print("Length:", len(numbers))      # Count items
+print("Maximum:", max(numbers))     # Largest value
+print("Minimum:", min(numbers))     # Smallest value
+print("Sum:", sum(numbers))         # Sum of values
 
-numbers.append(60)
-print("After Append:", numbers)
-
-numbers[2] = 35
-print("After Updating 3rd element:", numbers)
-
-numbers.remove(40)
-print("After Removing 40:", numbers)
-
-print("Slicing (1 to 4):", numbers[1:5])
-
-print("List Elements:")
-for n in numbers:
-    print(n)
+print("Final List:", numbers)
 
 
-print("\n===== TUPLE OPERATIONS =====")
+# Tuple example
+colors = ("red", "green", "blue", "green")
 
-# Tuple
-fruits = ("apple", "banana", "cherry", "banana")
-print("Tuple:", fruits)
+# Methods
+print("Count of 'green':", colors.count("green"))
+print("Index of 'blue':", colors.index("blue"))
 
-print("Element at index 1:", fruits[1])
-print("Slicing (1 to 3):", fruits[1:3])
-print("Count of 'banana':", fruits.count("banana"))
-print("Index of 'cherry':", fruits.index("cherry"))
+# Built-in functions
+print("Length:", len(colors))
+print("Maximum:", max(colors))     # Alphabetically greatest
+print("Minimum:", min(colors))     # Alphabetically smallest
 
 
-print("\n===== DICTIONARY OPERATIONS =====")
 
-# Dictionary
+# Dictionary example
 student = {
     "name": "Teju",
-    "age": 20,
-    "course": "Python"
+    "age": 22,
+    "course": "MSc CS"
 }
-print("Original Dictionary:", student)
 
-print("Name:", student["name"])
+# Methods
+print(student.keys())        # List of keys
+print(student.values())      # List of values
+print(student.items())       # List of key-value pairs
 
-student["mark"] = 92
-print("After Adding mark:", student)
+student.update({"age": 23})  # Update value
+student.pop("course")        # Remove a key-value pair
 
-student["age"] = 21
-print("After Updating Age:", student)
+# Built-in function
+print("Length:", len(student))
 
-del student["course"]
-print("After Deleting Course:", student)
-
-print("Dictionary Items:")
-for key, value in student.items():
-    print(key, ":", value)
-
-print("\n===== END OF PROGRAM =====")
+print("Final Dictionary:", student)
