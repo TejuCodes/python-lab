@@ -14,3 +14,17 @@ for i in range(1, 255):
         print(f"{ip} is ACTIVE")
     else:
         print(f"{ip} is inactive")
+
+
+import os
+
+network="192.168.1."
+print("<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>")
+for host in range(1,50):
+    ip=network+str(host)
+    result=os.system(f'ping -n 1 {ip} >nul')
+    if result ==0:
+        print(ip,"is open")
+    else:
+        print(ip,"is closed")
+    host.close()
